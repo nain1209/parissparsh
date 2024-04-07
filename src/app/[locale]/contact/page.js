@@ -1,11 +1,10 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import Layout from '@/_components/Contact/Layout';
 import Address from '@/_components/Contact/AddressSection';
 import ContactSection from '@/_components/Contact/ContactSection';
 import Wrapper from '@/_components/Contact/Wrapper';
 
-export default async function Contact({ params: { locale } }) {
-	unstable_setRequestLocale(locale);
+export default async function Contact() {
 	const dict = await getTranslations('contactPage');
 
 	const address = {

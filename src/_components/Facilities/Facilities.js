@@ -1,6 +1,7 @@
 'use client';
 
 import styled from 'styled-components';
+import { useLocale } from 'next-intl';
 
 import PictureGroup from '@/_components/UI/PictureGroup';
 import H2 from '@/_components/UI/HeadingH2';
@@ -29,8 +30,8 @@ import Others4 from '../../_assets/facilities/others/others-4.png';
 
 import { TABLET_MEDIA, LAPTOP_MEDIA, DESKTOP_MEDIA } from '@/lib/utils';
 
-const Facilities = ({ locale }) => {
-	console.log({ locale });
+const Facilities = () => {
+	const locale = useLocale();
 	const facilitiesListEng = [
 		{
 			images: [

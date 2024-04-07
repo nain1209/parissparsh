@@ -1,8 +1,7 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import About from '@/_components/About/About';
 
-export default async function AboutPage({ params: { locale } }) {
-	unstable_setRequestLocale(locale);
+export default async function AboutPage() {
 	const dict = await getTranslations('aboutPage');
 
 	const content = {

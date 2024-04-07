@@ -1,9 +1,8 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 import Gallery from '@/_components/Gallery/Gallery';
 
-const GalleryPics = async ({ params: { locale } }) => {
-	unstable_setRequestLocale(locale);
+const GalleryPics = async () => {
 	const dict = await getTranslations('galleryPage');
 
 	const gallery = {

@@ -1,4 +1,4 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 import MainWrapper from '@/_components/Home/MainWrapper';
 import Hero from '@/_components/Home/Hero';
@@ -11,7 +11,6 @@ import Address from '@/_components/Home/Address';
 import Gallery from '@/_components/Home/Gallery';
 
 export default async function Home({ params: { locale } }) {
-	unstable_setRequestLocale(locale);
 	const dict = await getTranslations('homePage');
 	const featuresKeys = ['quality-food', 'medical-care', 'mental-support'];
 	const features = [];

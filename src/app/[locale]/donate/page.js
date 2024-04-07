@@ -1,11 +1,10 @@
+import { getTranslations } from 'next-intl/server';
 import PaymentsSection from '@/_components/Donate/PaymentsSection';
 import InfoSection from '@/_components/Donate/InfoSection';
 
 import DonateWrapper from '@/_components/Donate/DonateWrapper';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-export default async function Donate({ params: { locale } }) {
-	unstable_setRequestLocale(locale);
+export default async function Donate() {
 	const dict = await getTranslations('donatePage');
 
 	const payments = {
