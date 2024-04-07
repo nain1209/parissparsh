@@ -1,0 +1,24 @@
+/* // 0 - 549px - Mobile
+// 550px - 1099px - Tablet
+// 1100px - 1499px - Laptop
+// 1500px and up - Desktop
+
+// mobile first media queries
+// 550px */
+/* @mixin for-tablet {
+	@media (min-width: 550px) {
+		@content;
+	}
+} */
+
+/* @mixin for-laptop {
+	@media (min-width: 1100px) {
+		@content;
+	}
+} */
+/* // 1100px
+@mixin for-desktop {
+	@media (min-width: 1500px) {
+		@content;
+	}
+} */
