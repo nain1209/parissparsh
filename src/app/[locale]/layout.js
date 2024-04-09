@@ -1,7 +1,6 @@
 import localFont from 'next/font/local';
 import { getTranslations } from 'next-intl/server';
 import { Crimson_Pro, Prompt, Poppins } from 'next/font/google';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import BodyWrapper from '@/_components/layout/BodyWrapper';
 
 const crimsonPro = Crimson_Pro({
