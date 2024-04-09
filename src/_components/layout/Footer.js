@@ -50,6 +50,9 @@ const Footer = ({ textContent, address }) => {
 				</div>
 			</InfoSection>
 			<Copyright>&copy; Copyright 2024 - Present. Parissparsh Multipurpose Foundation. All Rights Reserved.</Copyright>
+			<Credits>
+				Website designed and developed by <Link href='https://www.linkedin.com/in/nainysewaney/'>Nainy Sewaney</Link>
+			</Credits>
 		</Wrapper>
 	);
 };
@@ -204,7 +207,7 @@ const Copyright = styled.small`
 	color: var(--pure-white, #fff);
 	font-family: var(--font-satoshi);
 	background: var(--primary-dark);
-	font-size: calc(12 / 16 * 1rem);
+	font-size: calc(14 / 16 * 1rem);
 	font-weight: 400;
 	line-height: 1.42;
 	letter-spacing: -0.14px;
@@ -216,4 +219,18 @@ const Copyright = styled.small`
 	display: block;
 `;
 
+const Credits = styled.small`
+	background-color: var(--primary-dark);
+	color: var(--pure-white, #fff);
+	font-family: var(--font-satoshi);
+	display: block;
+	text-align: center;
+	margin-top: -2px;
+	padding-bottom: 8px;
+	font-size: calc(14 / 16 * 1rem);
+
+	& a {
+		color: var(--pure-white, #fff);
+	}
+`;
 export default Footer;
