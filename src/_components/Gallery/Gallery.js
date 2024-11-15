@@ -86,7 +86,7 @@ const MainSection = styled.section`
 const PicturesWrapper = styled.section`
 	margin-top: 30px;
 	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 14px;
 
 	${TABLET_MEDIA} {
