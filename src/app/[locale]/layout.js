@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import { getTranslations } from 'next-intl/server';
 import { Crimson_Pro, Prompt, Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import BodyWrapper from '@/_components/layout/BodyWrapper';
 
 const crimsonPro = Crimson_Pro({
@@ -99,6 +100,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 			</head>
 			<BodyWrapper menu={menu} footer={footer} address={address} logoText={logo} locale={locale}>
 				{children}
+				<Analytics />
 			</BodyWrapper>
 		</html>
 	);
