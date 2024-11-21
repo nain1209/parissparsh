@@ -97,6 +97,10 @@ export default async function RootLayout({ children, params: { locale } }) {
 			<head>
 				<title>{textContent('title')}</title>
 				<meta name='description' content={textContent('metaDescription')}></meta>
+				<meta
+					name='ahrefs-site-verification'
+					content='e277958d3602125a5268adf1b2484eb0c07d5f100ad0a7df6279ebb8e2ec5502'
+				></meta>
 			</head>
 			<BodyWrapper menu={menu} footer={footer} address={address} logoText={logo} locale={locale}>
 				{children}
