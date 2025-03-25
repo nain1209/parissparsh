@@ -198,6 +198,7 @@ const Facilities = () => {
 								<H3>{facility.title}</H3>
 								<List list={facility.list} />
 								<Number>{(index + 1).toString().padStart(2, '0')}</Number>
+								{index % 2 == 0 ? <Disclaimer>*Images used for representation purposes only</Disclaimer> : null}
 							</div>
 						</InfoWrapper>
 					);
@@ -277,5 +278,16 @@ const Number = styled.span`
 
 	${LAPTOP_MEDIA} {
 		font-size: 200px;
+	}
+`;
+
+const Disclaimer = styled.figcaption`
+	font-size: 12px;
+	position: absolute;
+	bottom: -50px;
+	right: 0;
+
+	${LAPTOP_MEDIA} {
+		bottom: 0px;
 	}
 `;
