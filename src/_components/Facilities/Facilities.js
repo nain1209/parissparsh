@@ -186,6 +186,10 @@ const Facilities = () => {
 
 	const facilitiesList = locale === 'en' ? facilitiesListEng : facilitiesListMarathi;
 	const heading = locale === 'en' ? 'Facilities' : 'सुविधा';
+	const disclaimer =
+		locale === 'en'
+			? 'Images used for representation purposes only'
+			: 'केवळ प्रतिनिधित्वासाठी वापरल्या गेलेल्या प्रतिमा';
 	return (
 		<Wrapper>
 			<H2>{heading}</H2>
@@ -198,7 +202,7 @@ const Facilities = () => {
 								<H3>{facility.title}</H3>
 								<List list={facility.list} />
 								<Number>{(index + 1).toString().padStart(2, '0')}</Number>
-								{index % 2 == 0 ? <Disclaimer>*Images used for representation purposes only</Disclaimer> : null}
+								{index % 2 == 0 ? <Disclaimer>*{disclaimer}</Disclaimer> : null}
 							</div>
 						</InfoWrapper>
 					);
