@@ -8,7 +8,7 @@ import H2 from '@/_components/UI/HeadingH2';
 import Rectangle from '@/_components/UI/Rectangle';
 import Quote from '@/_components/UI/Quote';
 import H3 from '@/_components/UI/HeadingH3';
-import { Link } from '@/navigation';
+import { useRouter } from '@/navigation';
 
 import SantGadgeMaharajPhoto from '../../_assets/SantGadgeMaharaj.png';
 /* import SantGadgeMaharajPhoto from '../../_assets/sant-gadge-maharaj.png'; */
@@ -18,6 +18,7 @@ import TeamMember2 from '../../_assets/TeamMember2.png';
 import { DESKTOP_MEDIA, LAPTOP_MEDIA, TABLET_MEDIA } from '@/lib/utils';
 
 const About = ({ textContent }) => {
+	const router = useRouter();
 	const locale = useLocale();
 	const teamMembers = [
 		{
@@ -31,6 +32,10 @@ const About = ({ textContent }) => {
 			designation: textContent.team.members[1].designation
 		}
 	];
+
+	const onDonateClickHandler = () => {
+		router.push('/donate');
+	};
 
 	return (
 		<Wrapper>
@@ -60,15 +65,11 @@ const About = ({ textContent }) => {
 				<br />
 				<Text locale={locale}>{textContent.para7}</Text>
 				<br />
-				{locale === 'en' ? (
-					<Text>
-						To donate <Link href={'/donate'}>click here</Link>.
-					</Text>
-				) : (
-					<Text>
-						दान करण्यासाठी <Link href={'/donate'}>इथे क्लिक करा</Link>.
-					</Text>
-				)}
+				{
+					<DonateButton onClick={onDonateClickHandler}>
+						{locale === 'en' ? ' Donate to Prem Kunj' : 'प्रेम कुंजला दान करा'}
+					</DonateButton>
+				}
 			</ContentWrapper>
 			<Team>
 				<H3>{textContent.team.heading}</H3>
@@ -148,6 +149,38 @@ const Text = styled.p`
 		line-height: ${(props) => (props.locale === 'en' ? '1.41' : '1.5')};
 	}
 `;
+
+const DonateButton = styled.button`
+	display: block;
+	padding: 12px 25px;
+	background-color: var(--accent);
+	color: var(--pure-white);
+	font-family: var(--font-accent);
+	font-size: calc(16 / 16 * 1rem);
+	font-weight: 500;
+	text-transform: uppercase;
+	border: none;
+	letter-spacing: 1px;
+	cursor: pointer;
+	margin: 0 auto;
+
+	${TABLET_MEDIA} {
+		margin: unset;
+	}
+
+	${LAPTOP_MEDIA} {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover {
+		color: var(--accent);
+		background-color: var(--pure-white);
+		outline: 1px solid var(--accent);
+		transition: all 0.2s ease;
+	}
+`;
+
 const Team = styled.section`
 	padding-top: 88px;
 `;

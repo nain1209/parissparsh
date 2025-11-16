@@ -4,12 +4,12 @@ import { useId } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import Image1 from '@/_assets/gallery/pics/pic-24.jpeg';
-import Image2 from '@/_assets/gallery/pics/pic-23.jpeg';
-import Image3 from '@/_assets/gallery/pics/pic-22.jpeg';
-import Image4 from '@/_assets/gallery/pics/pic-21.jpeg';
-import Image5 from '@/_assets/gallery/pics/pic-20.jpeg';
-import Image6 from '@/_assets/gallery/pics/pic-19.jpeg';
+import Image1 from '@/_assets/gallery/pics/pic-35.jpeg';
+import Image2 from '@/_assets/gallery/pics/pic-34.jpeg';
+import Image3 from '@/_assets/gallery/pics/pic-33.jpeg';
+import Image4 from '@/_assets/gallery/pics/pic-32.jpeg';
+import Image5 from '@/_assets/gallery/pics/pic-31.jpeg';
+import Image6 from '@/_assets/gallery/pics/pic-30.jpeg';
 
 import H3 from '../UI/HeadingH3';
 

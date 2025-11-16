@@ -29,6 +29,17 @@ import Image21 from '@/_assets/gallery/pics/pic-21.jpeg';
 import Image22 from '@/_assets/gallery/pics/pic-22.jpeg';
 import Image23 from '@/_assets/gallery/pics/pic-23.jpeg';
 import Image24 from '@/_assets/gallery/pics/pic-24.jpeg';
+import Image25 from '@/_assets/gallery/pics/pic-25.jpeg';
+import Image26 from '@/_assets/gallery/pics/pic-26.jpeg';
+import Image27 from '@/_assets/gallery/pics/pic-27.jpeg';
+import Image28 from '@/_assets/gallery/pics/pic-28.jpeg';
+import Image29 from '@/_assets/gallery/pics/pic-29.jpeg';
+import Image30 from '@/_assets/gallery/pics/pic-30.jpeg';
+import Image31 from '@/_assets/gallery/pics/pic-31.jpeg';
+import Image32 from '@/_assets/gallery/pics/pic-32.jpeg';
+import Image33 from '@/_assets/gallery/pics/pic-33.jpeg';
+import Image34 from '@/_assets/gallery/pics/pic-34.jpeg';
+import Image35 from '@/_assets/gallery/pics/pic-35.jpeg';
 
 import Image from 'next/image';
 import { DESKTOP_MEDIA, LAPTOP_MEDIA, TABLET_MEDIA } from '@/lib/utils';
@@ -58,7 +69,17 @@ const Gallery = ({ textContent = '' }) => {
 		{ src: Image21, alt: '', id: useId() },
 		{ src: Image22, alt: '', id: useId() },
 		{ src: Image23, alt: '', id: useId() },
-		{ src: Image24, alt: '', id: useId() }
+		{ src: Image24, alt: '', id: useId() },
+		{ src: Image25, alt: '', id: useId() },
+		{ src: Image26, alt: '', id: useId() },
+		{ src: Image27, alt: '', id: useId() },
+		{ src: Image28, alt: '', id: useId() },
+		{ src: Image29, alt: '', id: useId() },
+		{ src: Image30, alt: '', id: useId() },
+		{ src: Image31, alt: '', id: useId() },
+		{ src: Image32, alt: '', id: useId() },
+		{ src: Image34, alt: '', id: useId() },
+		{ src: Image35, alt: '', id: useId() }
 	];
 
 	return (
@@ -94,7 +115,7 @@ const PicturesWrapper = styled.section`
 	}
 
 	${LAPTOP_MEDIA} {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 `;
 
