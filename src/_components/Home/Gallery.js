@@ -3,6 +3,7 @@
 import { useId } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { useLocale } from 'next-intl';
 
 import Image1 from '@/_assets/gallery/pics/pic-35.jpeg';
 import Image2 from '@/_assets/gallery/pics/pic-34.jpeg';

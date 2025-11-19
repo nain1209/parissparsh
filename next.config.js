@@ -4,6 +4,17 @@ const withNextIntl = require('next-intl/plugin')();
 const nextConfig = {
 	compiler: {
 		styledComponents: true
+	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'res.cloudinary.com'
+				/*   port: "",
+        pathname: "/my-account/**",
+        search: "", */
+			}
+		]
 	}
 };
 
