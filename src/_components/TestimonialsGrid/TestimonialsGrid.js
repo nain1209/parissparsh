@@ -278,9 +278,9 @@ const Person = styled.p`
 	color: var(--gray-dark);
 `;
 
-// -----------------------------
-// Modal
-// -----------------------------
+/* -----------------------------
+   Modal
+----------------------------- */
 
 const ModalBackdrop = styled.div`
 	position: fixed;
@@ -300,7 +300,16 @@ const Modal = styled.div`
 	border-radius: 10px;
 	overflow: hidden;
 	position: relative;
-	z-index: 9991; /* above backdrop */
+	z-index: 9991;
+
+	/* FULL SCREEN MOBILE */
+	@media (max-width: 768px) {
+		width: 100vw;
+		height: 100vh;
+		max-width: none;
+		max-height: none;
+		border-radius: 0;
+	}
 `;
 
 const CloseBtn = styled.button`
@@ -312,19 +321,36 @@ const CloseBtn = styled.button`
 	background: none;
 	border: none;
 	cursor: pointer;
-	z-index: 9999; /* highest */
+	z-index: 9999;
 `;
 
 const ModalVideo = styled.div`
 	width: 100%;
-	padding-top: 56.25%;
 	position: relative;
+
+	/* Desktop: keep aspect ratio */
+	padding-top: 56.25%;
 
 	video {
 		position: absolute;
 		inset: 0;
 		width: 100%;
 		height: 100%;
+		object-fit: contain;
+		background: #000;
 		z-index: 5;
+	}
+
+	/* FULL SCREEN VIDEO ON MOBILE */
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 100%;
+		padding-top: 0;
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 `;
