@@ -15,6 +15,7 @@ const crimsonPro = Crimson_Pro({
 const satoshi = localFont({
 	src: '../../fonts/Satoshi-Variable.ttf',
 	variable: '--font-satoshi',
+	declarations: [{ prop: 'font-feature-settings', value: 'frac' }],
 	subsets: ['latin'],
 	fallback: ['Helvetica', 'Arial', 'sans-serif']
 });

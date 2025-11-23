@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import getRequestConfig from '../../i18n';
 
 import MainWrapper from '@/_components/Home/MainWrapper';
 import Hero from '@/_components/Home/Hero';
@@ -9,6 +10,7 @@ import InfoWrapper from '@/_components/Home/InfoWrapper';
 import Testimonials from '@/_components/Home/Testimonials';
 import Address from '@/_components/Home/Address';
 import Gallery from '@/_components/Home/Gallery';
+import TestimonialsGrid from '@/_components/TestimonialsGrid/TestimonialsGrid';
 
 export default async function Home({ params: { locale } }) {
 	const dict = await getTranslations('homePage');
@@ -43,6 +45,11 @@ export default async function Home({ params: { locale } }) {
 		link: dict('facilities.link')
 	};
 
+	const testimonials = {
+		heading: dict('stories.heading'),
+		subHeading: dict('stories.subHeading')
+	};
+
 	const gallery = {
 		heading: dict('gallery.heading'),
 		cta: dict('gallery.cta')
@@ -72,6 +79,7 @@ export default async function Home({ params: { locale } }) {
 				<Features features={features} />
 				<Mission textContent={mission} />
 				<Care textContent={care} />
+				<TestimonialsGrid textContent={testimonials} />
 				<Gallery textContent={gallery} />
 				<InfoWrapper>
 					<Testimonials />

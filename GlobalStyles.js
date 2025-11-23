@@ -93,7 +93,7 @@ p, button, section ,a {
 }
 
 p {
-  font-size: calc(17 / 16 * 1rem);
+  font-size: calc(16 / 16 * 1rem);
   color: var(--black);
   line-height:1.41;
 

@@ -1,12 +1,9 @@
 'use client';
 import styled from 'styled-components';
-import Image from 'next/image';
 import Carousel from 'nuka-carousel';
 import { useLocale } from 'next-intl';
 
 import H3 from '../UI/HeadingH3';
-
-import ProfilePictureImage from '../../_assets/mobile/profile-picture-1.png';
 
 import { DESKTOP_MEDIA, LAPTOP_MEDIA, TABLET_MEDIA } from '@/lib/utils';
 
