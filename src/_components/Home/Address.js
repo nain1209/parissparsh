@@ -20,11 +20,9 @@ const Address = ({ textContent }) => {
 
 const Wrapper = styled.section`
 	padding-top: 130px;
-	padding-bottom: 130px;
 
 	${LAPTOP_MEDIA} {
 		padding-top: revert;
-		padding-bottom: revert;
 	}
 `;
 

@@ -184,7 +184,6 @@ export default function TestimonialsGrid({ textContent }) {
 const Section = styled.section`
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 20px;
 `;
 
 const Sub = styled.p`
