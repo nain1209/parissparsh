@@ -328,8 +328,8 @@ const ModalVideo = styled.div`
 	width: 100%;
 	position: relative;
 
-	/* Desktop: keep aspect ratio */
-	padding-top: 56.25%;
+	/* Default: mobile - full screen video */
+	height: 100vh;
 
 	video {
 		position: absolute;
@@ -341,14 +341,17 @@ const ModalVideo = styled.div`
 		z-index: 5;
 	}
 
-	/* FULL SCREEN VIDEO ON MOBILE */
-	@media (max-width: 768px) {
-		width: 100%;
-		height: 100%;
-		padding-top: 0;
+	/* Tablet */
+	${TABLET_MEDIA} {
+		height: 75vh;
+	}
+
+	/* Desktop: keep 16:9 aspect ratio */
+	${LAPTOP_MEDIA} {
+		height: auto;
+		padding-top: 56.25%; /* 16:9 ratio */
 
 		video {
-			width: 100%;
 			height: 100%;
 			object-fit: contain;
 		}
