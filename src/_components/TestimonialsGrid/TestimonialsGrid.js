@@ -67,7 +67,7 @@ const enVideos = [
 	{
 		id: 8,
 		name: '64 year old Pancham Nagvanshi living since 1.5 years',
-		quote: '“Feel grateful to be here and being treated like a part of the family”',
+		quote: '“I feel thankful to be here and to be cared for like a family member”',
 		poster: posterUrl('WhatsApp_Video_2025-11-16_at_8.28.27_AM_m1bzzp'),
 		video: videoUrl('WhatsApp_Video_2025-11-16_at_8.28.27_AM_m1bzzp')
 	}
