@@ -138,7 +138,7 @@ const FilledButton = styled.button`
 	cursor: pointer;
 	padding: 12px 25px;
 	letter-spacing: 0.5px;
-	margin-right: 16px;
+	margin-right: 8px;
 
 	&:hover {
 		background-color: var(--pure-white);
