@@ -136,7 +136,7 @@ const FilledButton = styled.button`
 	border-color: var(--primary);
 	color: var(--pure-white);
 	cursor: pointer;
-	padding: 12px 25px;
+	padding: 12px 16px;
 	letter-spacing: 0.5px;
 	margin-right: 8px;
 
@@ -156,7 +156,7 @@ const OutlinedButton = styled.button`
 	border-color: var(--primary);
 	color: var(--primary);
 	cursor: pointer;
-	padding: 12px 25px;
+	padding: 12px 16px;
 	letter-spacing: 0.5px;
 
 	&:hover {
