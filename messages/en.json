@@ -19,9 +19,10 @@
 	},
 	"homePage": {
 		"hero": {
-			"heading": "Your go-to <em>companion</em> for <em>elderly care</em>",
+			"heading": "Your go-to <em>companion</em> for <em>elderly care</em> in Ulhasnagar",
 			"text": "Parissparsh Foundation’s Prem Kunj Old Age Home & Health Care Centre located at Ulhasnagar, Maharashtra is a safe place for the seniors of the society who wish to find a home away from home.",
-			"cta": "Contact"
+			"cta": "Contact Us",
+			"ghostCta": "Learn More"
 		},
 		"features": {
 			"quality-food": {

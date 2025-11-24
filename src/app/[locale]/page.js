@@ -74,6 +74,7 @@ export default async function Home({ params: { locale } }) {
 					})}
 					text={dict('hero.text')}
 					ctaText={dict('hero.cta')}
+					ghostCtaText={dict('hero.ghostCta')}
 					locale={locale}
 				/>
 				<Features features={features} />

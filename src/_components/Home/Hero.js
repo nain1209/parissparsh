@@ -9,10 +9,14 @@ import heroImage from '@/_assets/hero.jpg';
 
 import { DESKTOP_MEDIA, LAPTOP_MEDIA, TABLET_MEDIA } from '@/lib/utils';
 
-const Hero = ({ heading, text, ctaText, locale }) => {
+const Hero = ({ heading, text, ctaText, ghostCtaText, locale }) => {
 	const router = useRouter();
 	const onClickHandler = () => {
 		router.push('/contact');
+	};
+
+	const onGhostClickHandler = () => {
+		document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth', block: 'end' });
 	};
 
 	return (
@@ -32,7 +36,8 @@ const Hero = ({ heading, text, ctaText, locale }) => {
 			<ContentWrapper>
 				<Title locale={locale}>{heading}</Title>
 				<Text>{text}</Text>
-				<OutlinedButton onClick={onClickHandler}>{ctaText}</OutlinedButton>
+				<FilledButton onClick={onClickHandler}>{ctaText}</FilledButton>
+				<OutlinedButton onClick={onGhostClickHandler}>{ghostCtaText}</OutlinedButton>
 			</ContentWrapper>
 		</Section>
 	);
@@ -124,7 +129,26 @@ const Text = styled.p`
 		font-size: calc(20 / 16 * 1rem);
 	}
 `;
+const FilledButton = styled.button`
+	font-family: var(--font-accent);
+	background-color: var(--primary);
+	text-transform: uppercase;
+	border-color: var(--primary);
+	color: var(--pure-white);
+	cursor: pointer;
+	padding: 12px 25px;
+	letter-spacing: 0.5px;
+	margin-right: 16px;
 
+	&:hover {
+		background-color: var(--pure-white);
+		color: var(--primary);
+	}
+
+	${TABLET_MEDIA} {
+		margin-right: 24px;
+	}
+`;
 const OutlinedButton = styled.button`
 	font-family: var(--font-accent);
 	background-color: transparent;

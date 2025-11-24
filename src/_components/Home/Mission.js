@@ -16,7 +16,7 @@ import { DESKTOP_MEDIA, LAPTOP_MEDIA, TABLET_MEDIA } from '@/lib/utils';
 
 const Work = ({ textContent }) => {
 	return (
-		<Section>
+		<Section id={'mission'}>
 			<ImageWrapper>
 				<SectionImage2>
 					<Image
